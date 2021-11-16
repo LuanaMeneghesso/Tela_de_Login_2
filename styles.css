@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vh;
+}
+
+
+body {
+    background-color: #916BBF;
+    font-family: 'Manrope','Trebuchet MS', Arial;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 45px;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    color: #fff;
+}
+
+form {
+    background-color: #fff;
+    padding: 60px 55px;
+    border-radius: 5px;
+    animation: aparecer 1.5s;
+    overflow: hidden;
+    margin-top: 45%;
+    margin-bottom: 45%;
+    width: 100%;
+}
+
+form .inserir {
+    margin-bottom: 20px;
+    animation: campos 1s;
+}
+
+form .inserir label {
+    font-size: 17px;
+    color: #191920;
+}
+
+form .inserir input {
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+    padding: 12px;
+    font-size: 10px;
+    color: #191920;
+    border-radius: 5px;
+    border: 1px solid #ccddef;
+    outline-color: #191920;
+}
+
+form .btn-login {
+    display: block;
+    min-width: 120px;
+    border: none;
+    background-color: #191920;
+    color: #fff;
+    border-radius: 25px;
+    margin: auto;
+    padding: 7px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-family: 'Manrope';
+}
+
+.btn-login:hover {
+    background-color: #FFA6D5;
+    color: #fafafa;
+    transition: 1s ease-in-out;
+}
+
+.esconder-form {
+    animation: esconder 2s forwards;
+}
+
+.loading {
+    width: 120px;
+    height: 120px;
+    border: 8px solid #e5e5e5;
+    border-top-color: #FFA6D5;
+    animation: rotation 1s linear infinite;
+    border-radius: 50%;
+    opacity: 0;
+    margin-top: -370px;
+    margin-left: 85px;
+}
+
+.aparecer-loading {
+    animation: aparecerloading 2s forwards, rotation 1s infinite;
+}
+
+
+/*Animação para o login aparecer suavemente*/
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes campos {
+    from {
+        transform: translateX(-35%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes esconder {
+    from {
+        opacity: 1;
+        }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes rotation{
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+
+@keyframes aparecerloading {
+    from {
+        
+        }
+    to {
+        opacity: 1;
+    }
+}
+
